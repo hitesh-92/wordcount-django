@@ -9,4 +9,6 @@ def about(request):
     return HttpResponse('<em>Aboutttt</em>')
 
 def count(request):
-    return render(request, 'count.html')
+    fulltext = request.GET['fulltext']
+    wordlist = fulltext.split()
+    return render(request, 'count.html', {'fulltext': fulltext, 'count': len(wordlist)})

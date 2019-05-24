@@ -3,12 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Word Count</title>
+    <style>
+      .display{
+        display: grid;
+        grid-template-columns: repeat(8. 1fr);
+      }
+    </style>
   </head>
   <body>
-    <p>counteddddddd</p>
+    <h3>counteddddddd</h3>
+    <a href="/">Count new text</a>
+    <br>
     <p>Length: {{count}}</p>
 
     <p>Your text:</p>
     <p>{{fulltext}}</p>
+
+    <br />
+    <!-- <p>All counts:</p>
+    <p>{{dictionary}}</p> -->
+
+    <br>
+
+    <div class="display" style="display:grid; grid-template-columns: repeat(8, 1fr)">
+      {% for word, countTotal in dictionary %}
+        <p>{{word}} {{countTotal}}</p>
+      {% endfor %}
+    </div>
+
   </body>
 </html>

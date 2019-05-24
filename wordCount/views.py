@@ -7,3 +7,6 @@ def home(request):
 
 def about(request):
     return HttpResponse('<em>Aboutttt</em>')
+
+def count(request):
+    return render(request, 'count.html')

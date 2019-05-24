@@ -5,8 +5,9 @@
     <title>Word Count</title>
   </head>
   <body>
-    <p>Counterrrrrrr</p>
-    <p>{{ name }}</p>
+    <h3>Counterrrrrrr</h3>
+    <p>Made by: {{ name }}</p>
+    <p><a href="/about">About</a></p>
 
     <form action="{% url 'count' %}">
       <textarea name="fulltext" rows="5" cols="40">

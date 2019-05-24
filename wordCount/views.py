@@ -3,11 +3,11 @@ from django.shortcuts import render
 import operator
 
 def home(request):
-
     return render(request, 'home.html', {'name':'hitesh'})
 
 def about(request):
-    return HttpResponse('<em>Aboutttt</em>')
+    # return HttpResponse('<em>Aboutttt</em>')
+    return render(request, 'about.html')
 
 def count(request):
     fulltext = request.GET['fulltext']
